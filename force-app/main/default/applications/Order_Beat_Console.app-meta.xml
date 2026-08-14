@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Distribution order capture console</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Order Beat Console</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+        <tab>standard-Order</tab>
+        <tab>standard-Account</tab>
+        <tab>Beat__c</tab>
+        <tab>Outlet__c</tab>
+        <tab>Beat_Visit__c</tab>
+        <tab>Payment__c</tab>
+        <tab>Collection__c</tab>
+    <uiType>Lightning</uiType>
+</CustomApplication>

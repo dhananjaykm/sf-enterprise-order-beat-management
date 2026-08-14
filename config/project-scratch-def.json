@@ -1,0 +1,18 @@
+{
+  "orgName": "sf-enterprise-order-beat-management",
+  "edition": "Developer",
+  "features": [
+    "EnableSetPasswordInApi",
+    "ServiceCloud",
+    "SalesCloud",
+    "PlatformEvents"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}

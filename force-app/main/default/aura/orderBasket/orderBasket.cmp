@@ -1,0 +1,16 @@
+<!-- MIGRATION_CLASSIFICATION: HYBRID -->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="OrderBasketAuraController" access="global">
+    <aura:attribute name="error" type="String"/>
+    <aura:attribute name="busy" type="Boolean" default="false"/>
+    <aura:attribute name="rows" type="Object[]"/>
+    <aura:attribute name="selectedId" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="Legacy Aura component">
+        <aura:if isTrue="{!not(empty(v.error))}">
+            <ui:message severity="error" closable="true">{!v.error}</ui:message>
+        </aura:if>
+        <lightning:button label="Go" onclick="{!c.handleAction}"/>
+        <aura:iteration items="{!v.rows}" var="row"><p>{!row.name}</p></aura:iteration>
+
+    </lightning:card>
+</aura:component>

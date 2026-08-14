@@ -1,0 +1,7 @@
+risks:
+  - id: R1
+    topic: pricing_in_flow
+    detail: Naive conversion of PricingEngine will hit CPU limits.
+  - id: R2
+    topic: erp_auth
+    detail: Named credential / OAuth cannot live in Flow.

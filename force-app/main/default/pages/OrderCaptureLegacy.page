@@ -1,0 +1,38 @@
+<!-- MIGRATION_CLASSIFICATION: SCREEN_FLOW_CANDIDATE -->
+<!-- This legacy Visualforce page is a candidate for later Flow/LWC evaluation. -->
+<apex:page controller="OrderCaptureController" lightningStylesheets="true">
+    <apex:sectionHeader title="Order Capture" subtitle="Legacy wizard"/>
+    <apex:pageMessages/>
+    <apex:form>
+        <apex:pageBlock title="Step {!stepNumber} of 4">
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Previous" action="{!previous}" rendered="{!stepNumber > 1}"/>
+                <apex:commandButton value="Next" action="{!next}" rendered="{!stepNumber < 4}"/>
+                <apex:commandButton value="Finish" action="{!finish}" rendered="{!stepNumber == 4}"/>
+            </apex:pageBlockButtons>
+            <apex:outputPanel rendered="{!stepNumber == 1}">
+                <apex:pageBlockSection title="Select context">
+                    <apex:inputField value="{!contextName}"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!stepNumber == 2}">
+                <apex:pageBlockSection title="Review records">
+                    <apex:pageBlockTable value="{!rows}" var="r">
+                        <apex:column value="{!r.label}"/>
+                        <apex:column value="{!r.status}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!stepNumber == 3}">
+                <apex:pageBlockSection title="Confirm action">
+                    <apex:inputCheckbox value="{!confirmFlag}" label="I confirm this bulk action"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!stepNumber == 4}">
+                <apex:pageBlockSection title="Result">
+                    <apex:outputText value="{!resultMessage}"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel__c</fullName>
+    <label>Channel</label>
+    <type>Picklist</type>
+    <required>false</required>
+    <description>Channel</description>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kirana</fullName>
+                <default>true</default>
+                <label>Kirana</label>
+            </value>
+            <value>
+                <fullName>Supermarket</fullName>
+                <default>false</default>
+                <label>Supermarket</label>
+            </value>
+            <value>
+                <fullName>HORECA</fullName>
+                <default>false</default>
+                <label>HORECA</label>
+            </value>
+            <value>
+                <fullName>Institutional</fullName>
+                <default>false</default>
+                <label>Institutional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

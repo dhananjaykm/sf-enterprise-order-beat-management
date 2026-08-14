@@ -1,0 +1,37 @@
+version: 1
+org: sf-enterprise-order-beat-management
+automation:
+  - id: ORD-001
+    source_artifact: OrderFieldDerivationService.cls
+    conversion: { classification: A, confidence: high }
+    target: { flow_type: record_triggered, save_type: before }
+  - id: ORD-002
+    source_artifact: OrderApprovalService.cls
+    conversion: { classification: A, confidence: high }
+    target: { flow_type: record_triggered, save_type: after }
+  - id: ORD-003
+    source_artifact: OrderFulfillmentService.cls
+    source_method: createFollowups
+    conversion: { classification: A, confidence: high }
+    target: { flow_type: record_triggered, async: scheduled_path }
+  - id: ORD-004
+    source_artifact: PaymentFailureService.cls
+    conversion: { classification: A, confidence: high }
+  - id: ORD-005
+    source_artifact: PricingEngine.cls
+    conversion: { classification: E, confidence: high }
+  - id: ORD-006
+    source_artifact: PromotionOptimizer.cls
+    conversion: { classification: G, confidence: high }
+  - id: ORD-007
+    source_artifact: ERPOrderService.cls
+    conversion: { classification: C, confidence: high }
+  - id: ORD-008
+    source_artifact: OrderReconciliationBatch.cls
+    conversion: { classification: E, confidence: high }
+  - id: ORD-009
+    source_artifact: SubmitOrderInvocable.cls
+    conversion: { classification: B, confidence: high }
+  - id: ORD-010
+    source_artifact: InventoryService.cls
+    conversion: { classification: A, confidence: high }

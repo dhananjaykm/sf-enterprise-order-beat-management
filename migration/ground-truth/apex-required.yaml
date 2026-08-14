@@ -1,0 +1,9 @@
+retain:
+  - class: PricingEngine
+    reason: CPU-heavy ladder
+  - class: PromotionOptimizer
+    reason: combinatorial search
+  - class: ERPOrderService
+    reason: OAuth callout
+  - class: OrderReconciliationBatch
+    reason: volume

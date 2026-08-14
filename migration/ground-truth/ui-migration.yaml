@@ -1,0 +1,13 @@
+visualforce:
+  - page: OrderCaptureLegacy
+    classification: SCREEN_FLOW_CANDIDATE
+  - page: PricingSimulatorPage
+    classification: APEX_REQUIRED
+aura:
+  - component: beatPlanner
+    classification: SCREEN_FLOW_CANDIDATE
+lwc:
+  - component: orderSubmitWizard
+    classification: FLOW_EMBEDDING_CANDIDATE
+  - component: creditCheckPanel
+    path: Flow → LWC

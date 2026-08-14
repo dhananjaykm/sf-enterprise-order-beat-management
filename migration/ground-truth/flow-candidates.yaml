@@ -1,0 +1,7 @@
+candidates:
+  - id: ORD-001
+    recommended_flow: before_save_record_triggered
+  - id: ORD-003
+    recommended_flow: scheduled_path
+  - id: ORD-004
+    recommended_flow: after_save_record_triggered

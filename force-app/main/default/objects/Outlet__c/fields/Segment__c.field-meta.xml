@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment__c</fullName>
+    <label>Segment</label>
+    <type>Picklist</type>
+    <required>false</required>
+    <description>Segment</description>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GOLD</fullName>
+                <default>true</default>
+                <label>GOLD</label>
+            </value>
+            <value>
+                <fullName>SILVER</fullName>
+                <default>false</default>
+                <label>SILVER</label>
+            </value>
+            <value>
+                <fullName>BRONZE</fullName>
+                <default>false</default>
+                <label>BRONZE</label>
+            </value>
+            <value>
+                <fullName>MODERN_TRADE</fullName>
+                <default>false</default>
+                <label>MODERN_TRADE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

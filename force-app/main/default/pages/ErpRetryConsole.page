@@ -1,0 +1,25 @@
+<!-- MIGRATION_CLASSIFICATION: APEX_REQUIRED -->
+<!-- This legacy Visualforce page is a candidate for later Flow/LWC evaluation. -->
+<apex:page controller="ErpRetryController" tabStyle="Account" lightningStylesheets="true">
+    <apex:sectionHeader title="ERP Retry" subtitle="Legacy console"/>
+    <apex:pageMessages/>
+    <apex:form>
+        <apex:pageBlock title="ERP Retry">
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Refresh" action="{!refresh}"/>
+                <apex:commandButton value="Apply" action="{!apply}" rendered="{!NOT(ISBLANK(selectedIds))}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2">
+                <apex:inputText value="{!searchKey}" label="Search"/>
+                <apex:commandButton value="Search" action="{!search}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!rows}" var="row">
+                <apex:column>
+                    <apex:inputCheckbox value="{!row.selected}"/>
+                </apex:column>
+                    <apex:column value="{!row.label}"/>
+                    <apex:column value="{!row.status}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,25 @@
+<!-- MIGRATION_CLASSIFICATION: HYBRID -->
+<!-- This legacy Visualforce page is a candidate for later Flow/LWC evaluation. -->
+<apex:page controller="PromotionConsoleController" tabStyle="Account" lightningStylesheets="true">
+    <apex:sectionHeader title="Promotion Console" subtitle="Legacy console"/>
+    <apex:pageMessages/>
+    <apex:form>
+        <apex:pageBlock title="Promotion Console">
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Refresh" action="{!refresh}"/>
+                <apex:commandButton value="Apply" action="{!apply}" rendered="{!NOT(ISBLANK(selectedIds))}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2">
+                <apex:inputText value="{!searchKey}" label="Search"/>
+                <apex:commandButton value="Search" action="{!search}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!rows}" var="row">
+                <apex:column>
+                    <apex:inputCheckbox value="{!row.selected}"/>
+                </apex:column>
+                    <apex:column value="{!row.label}"/>
+                    <apex:column value="{!row.status}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,9 @@
+.sfdx/
+.sf/
+.localdevserver/
+node_modules/
+.DS_Store
+*.log
+.idea/
+.vscode/
+scripts/seed-data/generated/

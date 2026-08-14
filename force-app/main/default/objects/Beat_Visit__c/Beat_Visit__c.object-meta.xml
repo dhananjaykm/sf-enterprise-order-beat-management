@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Beat Visit</label>
+    <pluralLabel>Beat Visits</pluralLabel>
+    <description>Beat Visit</description>
+    <nameField>
+        <label>Beat Visit Name</label>
+        <type>AutoNumber</type>
+        <displayFormat>BVIS-{000000}</displayFormat>
+        <trackHistory>false</trackHistory>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableHistory>true</enableHistory>
+    <enableActivities>true</enableActivities>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableFeeds>false</enableFeeds>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+</CustomObject>
